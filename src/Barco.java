@@ -25,7 +25,7 @@ public class Barco {
 
     void levantarAncora() {
         if (ancoraLevantada == true) {
-            throw new RuntimeException("Ocorreu um problema: Ancora ja está levantada");
+          System.out.println("algo de errado aconteceu");
         }  else{
             ancoraLevantada = true;
             System.out.println("MARUJOS LEVANTEM A ANCORA!! ESTA NA HORA DE ZARPAR");
@@ -36,7 +36,7 @@ public class Barco {
 
     void abaixarAncora() {
         if (ancoraLevantada == false) {
-            throw new RuntimeException("Ocorreu um problema: Aconcora ja está abaixada");
+            System.out.println("algo de errado aconteceu");
         }else{
             ancoraLevantada = false;
             System.out.println("VAMOS FICAR POR AQUI, ABAIXEM ESSA ANCORA");
@@ -48,7 +48,7 @@ public class Barco {
 
     public void abaixarVelas(int velasAAbaixar){
         if(velasAbaixadas - velasAAbaixar  > 0 ||  totalDeVelas < velasAAbaixar || velasAAbaixar + velasAbaixadas > totalDeVelas || velasAAbaixar <= 0){
-            throw new IllegalArgumentException("Ocorreu um problema : O numero de velas à abaixar é muito alto ou muito baixo");
+            System.out.println("algo de errado aconteceu");
         } else {
                 isVelaAbaixada = true;
                 this.velasAbaixadas = velasAAbaixar + velasAbaixadas;
@@ -63,7 +63,7 @@ public class Barco {
 
     public void levantarVelas(int velasLevantadas) {
         if(isVelaAbaixada == false || velasLevantadas < velasLevantadas || velasLevantadas <= 0){
-            throw new IllegalArgumentException("Ocorreu um problema : O numero de velas a levantar é muito alto ou muito baixo");
+            System.out.println("algo de errado aconteceu");
         } else {
             this.velasAbaixadas = velasAbaixadas - velasLevantadas;
             System.out.println(this.nomeDoBarco + " LEVANTEM AS VELAS!!!");
