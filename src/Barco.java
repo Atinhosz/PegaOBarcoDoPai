@@ -4,7 +4,7 @@ public class Barco {
 
     private String nomeDoBarco;
     private String nomeDoCapitao;
-    //String timão;
+    private String timão;   
     private int totalDeVelas;
     private int velasAbaixadas;
     private boolean isVelaAbaixada = false;
